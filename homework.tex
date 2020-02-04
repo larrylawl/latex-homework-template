@@ -8,8 +8,11 @@
 \usepackage{tikz}
 \usepackage[plain]{algorithm}
 \usepackage{algpseudocode}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 \usetikzlibrary{automata,positioning}
+
 
 %
 % Basic Document Settings
@@ -25,8 +28,8 @@
 \linespread{1.1}
 
 \pagestyle{fancy}
-\lhead{\hmwkAuthorName}
-\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle}
+\lhead{\hmwkAuthorName (\hmwkAuthorMatricNo)}
+\chead{\hmwkClass\ (\hmwkClassTime): \hmwkTitle}
 \rhead{\firstxmark}
 \lfoot{\lastxmark}
 \cfoot{\thepage}
@@ -91,7 +94,8 @@
 \newcommand{\hmwkClass}{Calculus}
 \newcommand{\hmwkClassTime}{Section A}
 \newcommand{\hmwkClassInstructor}{Professor Isaac Newton}
-\newcommand{\hmwkAuthorName}{\textbf{Josh Davis} \and \textbf{Davis Josh}}
+\newcommand{\hmwkAuthorName}{\textbf{Larry Law}}
+\newcommand{\hmwkAuthorMatricNo}{\textbf{A0189883A}}
 
 %
 % Title Page
@@ -100,12 +104,14 @@
 \title{
     \vspace{2in}
     \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
-    \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate\ at 3:10pm}\\
-    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+    \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate\ }\\
+    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ }} \\
+    \vspace{0.1in}\large{\textit{\hmwkClassTime\ }} \\
     \vspace{3in}
 }
 
-\author{\hmwkAuthorName}
+\author{\hmwkAuthorName \\ 
+(\hmwkAuthorMatricNo)}
 \date{}
 
 \renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
