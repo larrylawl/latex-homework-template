@@ -542,4 +542,43 @@
     \(\int_1^{\infty} \frac{1}{x^2} \dx\).
 \end{homeworkProblem}
 
+\pagebreak
+
+\begin{homeworkProblem}
+    (a) Prove that \( h \) is consistent with all +ve training examples observed thus far, not including \( d \).
+
+    \begin{proof}
+        Let \( P(n) = h_n \) is consistent with \( D_n \forall n \in \mathbb{N} \), 
+        where \( h_n \) denote the h for the nth iteration and \( D_n =\left\{\left\langle x_{k}, c\left(x_{k}\right)\right\rangle : c(x_k) = 1 \right\}_{k=1, \ldots, n - 1} \)
+        \\ Note that \( O(k) = n - 1 \neq n \) as the prove does not include the current training example \( d \).
+
+        By mathematical induction,
+        \begin{enumerate}
+            \item \textbf{Base Case:} 
+            \begin{enumerate}
+                \item \( P(1) \implies D = \emptyset \)
+                \item h is trivially consistent with D.
+                \item \( P(1) \)  is true.
+            \end{enumerate}
+            \item \textbf{Inductive Step:}
+            \begin{enumerate}
+                \item Assume \( P(k) \) is true. 
+                \\ That is, \( h_k \) is consistent with \( D_{k-1} \)
+                \item To prove \( P(k + 1) \) is also true. 
+                \\ That is, \( h_{k+1} \) for the (k+1)th iteration is consistent with \( D_k \)
+                \item By the end of the kth iteration
+                \begin{enumerate}
+                    \item \( S = \{h_k\} \cup \{s: \text{s is consistent with} D_{k-1} \} \) (by algorithm)
+                    \item \( S \) is consistent with \( D_{k-1}\) (by inductive hypothesis)
+                \end{enumerate}
+                \item For each \( h \) of \( s \), \( h \geq_g s \) (by algorithm)
+                \item \( h \) is consistent with \( d \) (by algorithm) and \( D_{k-1} \) (by definition of \( \geq_g \)) \( \implies \) h is consistent with \( D_k \)
+                \item \( P(k + 1) \) is true.
+            \end{enumerate}
+            \item We thus have that P(1) and \( \forall \mathbb{N}, P(k) \implies P(k + 1) \). So, by principle of mathematical induction, P(n) is true \( \forall \mathbb{N} \).
+        \end{enumerate}
+    \end{proof}
+\end{homeworkProblem}
+
+\pagebreak
 \end{document}
