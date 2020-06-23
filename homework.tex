@@ -3,8 +3,10 @@
 \usepackage{fancyhdr}
 \usepackage{extramarks}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage{tikz}
 \usepackage[plain]{algorithm}
 \usepackage{algpseudocode}
@@ -570,7 +572,7 @@
                 \begin{enumerate}
                     \item (\( h_k \) is consistent with \( D_{k-1} \)) \( \wedge \) (\( h_k \) is consistent with \( d_k \)) \( \implies \) \( h_k \) is consistent with \( D_k \)
                     \nolinebreak (by inductive hypothesis and algorithm)
-                    \item \( S = \{h_k\} \cup \{s: \text{s is consistent with} D_{k-1} \} \) (by algorithm)
+                    \item \( S = \{h_k\} \cup \{s \in S: \text{s is consistent with} D_{k-1} \} \) (by algorithm)
                     \item \( S \) is consistent with \( D_{k}\)
                 \end{enumerate}
                 \item At the (k+1)th iteration, 
